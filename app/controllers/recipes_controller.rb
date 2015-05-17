@@ -31,7 +31,7 @@ class RecipesController < ApplicationController
 			redirect_to :back, notice: 'You favorited #{@recipe.title}'
 
 		elsif type == "unfavorite"
-			current_user.favourites.delete(@recipe)
+			current_user.favourites.destroy(@recipe)
 			redirect_to :back, notice: 'Unfavorited #{@recipe.title}'
 
 		else
