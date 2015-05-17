@@ -36,7 +36,6 @@
 					= link_to "Edit", edit_recipe_path, class: "btn btn-default"
 					= link_to "Delete", recipe_path, method: :delete, data: {confirm: "Are you sure?" }, class: "btn btn-default"
 				- else
-					- if current_user.favourites.where(recipe_id: @recipe.id)
-						= link_to "unfavorite",   favourite_recipe_path(@recipe, type: "unfavorite"), method: :put, class: "btn btn-default"
-						= link_to "favorite",   favourite_recipe_path(@recipe, type: "favorite"), method: :put, class: "btn btn-default"
-						//= link_to "Add To Favourite", favourites_recipes_path, method: :create, class: "btn btn-default"
+					= link_to "favorite",   favourite_recipe_path(@recipe, type: "favorite"), method: :put, class: "btn btn-default"
+					= link_to "unfavorite",   favourite_recipe_path(@recipe, type: "unfavorite"), method: :put, class: "btn btn-default"
+					//= link_to "Add To Favourite", favourites_recipes_path, method: :create, class: "btn btn-default"

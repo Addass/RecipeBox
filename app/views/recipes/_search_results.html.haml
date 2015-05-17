@@ -1,0 +1,3 @@
+%ul
+	@recipes.each do |recipes|
+		%li= link_to recipes.title, :action => 'show', :id => recipes.id

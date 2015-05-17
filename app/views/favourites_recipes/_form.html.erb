@@ -1,0 +1,24 @@
+<%= form_for(@favourites_recipe) do |f| %>
+  <% if @favourites_recipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@favourites_recipe.errors.count, "error") %> prohibited this favourites_recipe from being saved:</h2>
+
+      <ul>
+      <% @favourites_recipe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :recipe_id %><br>
+    <%= f.number_field :recipe_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

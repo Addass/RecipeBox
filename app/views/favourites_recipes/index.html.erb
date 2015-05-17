@@ -1,0 +1,14 @@
+<% current_user.favourites.each_slice(3) do |recipes| %>
+  <div class="row">
+    <% recipes.each do |recipe| %>
+      <div class="col-md-4">
+        <div class="recipe">
+          <div class="image_wrapper">
+            <%= image_tag recipe.image.url(:medium) %>
+            <h2><%= link_to recipe.title, recipe %></h2>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

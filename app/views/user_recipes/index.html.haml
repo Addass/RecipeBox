@@ -1,5 +1,5 @@
-- if @recipe.any?
-	- @recipe.each_slice(3) do |recipes|
+- if @user_recipes.any?
+	- @user_recipes.each_slice(3) do |recipes|
 		.row
 			- recipes.each do |recipe|
 				.col-md-4

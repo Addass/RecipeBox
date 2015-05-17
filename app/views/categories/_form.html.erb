@@ -1,0 +1,27 @@
+<%= form_for(@category) do |f| %>
+  <% if @category.errors.any? %>
+    <div class="errors">
+      <p>
+        <%= @category.errors.count%>
+        Prevented this recipe forms saving
+      </p>
+      <ul>
+        <% @category.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :desc %><br>
+    <%= f.text_area :desc %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -27,6 +27,34 @@ body {
 	font-weight: bold;
 }
 
+.searchForm {
+	float: right;
+	padding-top: 9px;
+	padding-left: 25px;
+}
+
+.footer{
+	background-color: white;
+	@include box-shadow;
+	border-radius: 6px;
+	font-size: 19px;
+	text-align: center;
+	width: 1140px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: 193px;
+}
+
+.noResults{
+	background-color: white;
+	@include box-shadow;
+	border-radius: 5px;
+	font-size: 17px;
+	text-align: center;
+	margin-bottom: 30px;
+	font-weight: bold;
+}
+
 .navbar {
 	margin-bottom: 50px;
 	@include box-shadow;
